@@ -14,7 +14,7 @@ from transformers import BertTokenizer, BertModel
 # KONFIGURASI MODEL
 # =====================================================
 MODEL_PATH = "indobert_cnn_lstm.pt"
-FILE_ID = "GANTI_DENGAN_FILE_ID_GOOGLE_DRIVE_KAMU"  # <- WAJIB GANTI
+FILE_ID = "1XfMHjhm3XoT1IitYXh0b8WonsoEarfUb"  # <- WAJIB GANTI
 
 # =====================================================
 # DOWNLOAD MODEL JIKA BELUM ADA
@@ -23,9 +23,13 @@ def download_model():
     if not os.path.exists(MODEL_PATH):
         st.info("📥 Mengunduh model, mohon tunggu...")
         url = f"https://drive.google.com/uc?id={FILE_ID}"
-        gdown.download(url, MODEL_PATH, quiet=False)
+        gdown.download(
+            url,
+            MODEL_PATH,
+            quiet=False,
+            fuzzy=True   # <<< INI KUNCINYA
+        )
 
-download_model()
 
 # =====================================================
 # PREPROCESSING TEKS
