@@ -29,7 +29,6 @@ def download_model():
             url,
             MODEL_PATH,
             quiet=False,
-            fuzzy=True   # WAJIB untuk file besar (>100MB)
         )
 
 download_model()
