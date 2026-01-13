@@ -13,8 +13,8 @@ from transformers import BertTokenizer, BertModel
 # =====================================================
 # KONFIGURASI
 # =====================================================
-MODEL_PATH = "indobert_cnn_lstm.pt"
-FILE_ID = "GANTI_DENGAN_FILE_ID_GOOGLE_DRIVE_KAMU"
+MODEL_PATH = "indobert2_cnn_lstm.pt"
+FILE_ID = "1bOkZ29q5rwGD8jpSqcETn475j1PZVnhG"
 
 HATE_THRESHOLD = 0.60   # <<< THRESHOLD UTAMA (AMAN UNTUK DEMO)
 
